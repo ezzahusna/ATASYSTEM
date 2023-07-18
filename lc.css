@@ -1,0 +1,10 @@
+.wd{
+    width: 1100px;
+    height: 709px;
+    background-color: white;
+    padding: 55px;
+    margin-left: 10%;
+  }
+  .wd h1{
+    tansform: Uppercase;
+}

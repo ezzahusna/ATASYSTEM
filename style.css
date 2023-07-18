@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url(03.jpg);
+  background-size: cover;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.wd{
+  width: 1100px;
+  height: 750px;
+  background-image: url(04.png);
+  padding: 55px;
+  min-height: 70vh;
+  margin-left: 14.5%;
+}
+
+.header{
+  width: 1100px;
+  height: 150px;
+  margin-left: -55px;
+margin-top: -6%;
+}
+
+.menu-bar{
+  background: #F1DAB0;
+  text-align: center;
+  margin-left: 0%;
+  height: 62px;
+}
+
+.menu-bar ul{
+  display: inline-flex;
+  list-style: none;
+  color: black;
+  font-size: 17px;
+}
+
+.menu-bar ul li{
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.menu-bar ul li a{
+  text-decoration: none;
+  color: black;
+}
+.active, .menu-bar ul li:hover{
+  background: white;
+  border-radius: 3px;
+}
+
+.menu{
+  display: none;
+}
+
+.sub-menu{
+  display: none;
+}
+
+.menu-bar ul li:hover .menu{
+  display: block;
+  position: absolute;
+  background-color: #F1DAB0;
+  margin-top: 10px;
+  margin-left: -10px;
+  border-radius: 3px;
+}
+
+.menu-bar ul li:hover .menu ul{
+  display:block;
+  margin: 10px;
+}
+
+.menu-bar ul li:hover .menu ul li{
+  width: 100px;
+  padding: 10px;
+  border-bottom: 1px dotted black;
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+.menu-bar ul li:hover .menu ul li: last-child{
+  border-bottom: none;
+}
+
+.menu-bar ul li:hover .menu ul li a:hover{
+color: #DAA520;
+}
+
+.menu-bar ul li:hover .sub-menu{
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  margin-top: 10px;
+  margin-left: -10px;
+  border-radius: 3px;
+}
+
+.menu-bar ul li:hover .sub-menu ul{
+  display:block;
+}
+
+.menu-bar ul li:hover .sub-menu ul li{
+  width: 100px;
+  padding: 10px;
+  border-bottom: 1px dotted black;
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu ul li: last-child{
+  border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu ul li a:hover{
+color: #DAA520;
+}
+
+.wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  min-height: 68vh;
+  font-family: sans-serif;
+}
+
+.container
+{
+  position: relative;
+  left: 0%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 0 40px;
+}
+
+.container .box{
+position: relative;
+height: 230px;
+background:  #313133;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid #000;
+}
+
+.container .box:before{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #000;
+  transform: skew(2deg,2deg);
+  z-index: -1;
+}
+
+.container .box:nth-child(1):before{
+  background: linear-gradient(315deg,#000, #D10404);
+}
+
+.container .box:nth-child(2):before{
+  background: linear-gradient(315deg,#D10404 ,#000);
+}
+
+.container .box:nth-child(3):before{
+  background: linear-gradient(315deg,#000,#D10404);
+}
+
+.container .box:after{
+  position:absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.05);
+  pointer-events: none;
+
+}
+.content{
+  position: relative;
+  padding: 20px;
+  transform: translateY(40px);
+}
+
+.box .content h2{
+  position: absolute;
+  top: -60px;
+  right: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 7em;
+  color: rgba(255, 255, 255, .05);
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+.box:hover .content h2{
+  top: -140px;
+}
+
+.box .content h3{
+  margin: 0 0 10px;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  font-weight: bold;
+}
+
+.box .content p{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.box .content a{
+  position: relative;
+  margin: 20px 0 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  display: inline-block;
+  color: #fff;
+  transition: 0.5s;
+  transform: translateY(-40px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.box:hover .content a{
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.box .content a:hover{
+  color: #000;
+  background: #fff;
+}
+
+.footer{
+  text-align: center;
+  background-color: #F1DAB0;
+  padding: 20px;
+  margin-top: -2%
+}
+
+.footer p{
+ position: absolute;
+ color: black;
+ left:44%;
+}
+.footer a{
+  position: relative;
+  padding: 7px;
+  margin: 10px;
+  color: black;
+  left:6%;
+  font-size: 15px;
+}
